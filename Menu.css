@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Lato:wght@100;300;400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400&family=Pacifico&family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    cursor: pointer;
+}
+/* Variables */
+:root {
+    --heading-color: #111;
+    --ff: 'Roboto';
+    --underline: rgb(20, 96, 121);
+    --hfs: 1.75rem;
+    --fs: 1.25rem;
+    --jfs: 0.75rem;
+    --font-color: #2e2b2b;
+    --img-border: 8px solid rgb(41, 170, 187);
+    --bgcolor: rgb(179, 35, 85);
+    --bgcolor-fade: rgb(236, 102, 149);
+    --bgimage: linear-gradient(to bottom, var(--bgcolor), var(--bgcolor-fade));
+    --main-color: rgb(187, 160, 160);
+    --body-color: whitesmoke;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --margin: 1rem;
+    --margin-sm: 0.5rem;
+    --fixed-width: 620px;
+    --clr-primary-7: hsl(205, 90%, 76%);
+    --clr-primary-1: hsl(205, 86%, 17%);
+    --clr-primary-2: hsl(205, 77%, 27%);
+    --clr-primary-3: hsl(205, 72%, 37%);
+    --clr-primary-4: hsl(205, 63%, 48%);
+    --clr-primary-5: hsl(205, 78%, 60%);
+    --box-shadow: 0px 0px 10px var(--heading-color);
+    --box-shadow-ext: 0px 0px 16px rgba(10,57,89,0.78);
+    --padding: 1rem;
+}
+
+/* General Styles */
+html {
+    background-color: var(--bgcolor);
+    background-image: var(--bgimage);
+    font-size: var(--fs);
+    font-family: var(--ff);
+}
+
+body {
+    min-height: 100vh;
+    max-width: 60%;
+    margin: 0 auto;
+    background-color: var(--main-color);
+    letter-spacing: var(--spacing);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--box-shadow);
+}
+
+main {
+    color: var(--font-color);
+    line-height: 1.2;
+}
+
+/* End of general Styles */
+
+/* Utility Classes */
+.underline {
+    height: 0.3rem;
+    width: 5rem;
+    margin-right: auto;
+    margin-left: auto;
+    background: var(--underline);
+    margin-top: var(--margin-sm);
+    margin-bottom: var(--margin);
+}
+
+.offscreen {
+    position: absolute;
+    top: -9999999px;
+}
+
+
+/* END OF UTILITY CLASSES */
+
+.container {
+    width: clamp(350px, 40vw, 730px);
+    background-color: var(--body-color);
+    margin: var(--margin);
+    padding: var(--padding);
+    box-shadow: var(--box-shadow-ext);
+}
+
+.title {
+    text-align: center;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: var(--margin);
+    line-height: 2;
+}
+
+
+figure{
+    position: relative;
+}
+
+#img-person {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border-top: var(--img-border);
+    border-right: var(--img-border);
+}
+
+#job {
+    color: var(--clr-primary-5);
+    font-size: var(--jfs);
+    font-family: 'Merriweather';
+    text-transform: capitalize;
+}
+
+#author {
+    text-transform: capitalize;
+}
+
+#content {
+    text-align: center;
+    line-height: 1.1;
+    letter-spacing: normal;
+}
+
+figure .quotes {
+    position: absolute;
+    top: 1rem; /* Adjust the value as needed to move the icon to the desired position */
+    left: -0.5rem;
+    height: 2rem;
+    width: 2rem;
+    background-color: rgb(41, 170, 187);
+    color: var(--body-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.button-class {
+    margin-top: var(--margin);
+}
+
+.previous-btn,
+.next-btn {
+  color: var(--clr-primary-7);
+  font-size: 1.25rem;
+  background: transparent;
+  border-color: transparent;
+  margin: 0 0.5rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.previous-btn:hover,
+.next-btn:hover {
+  color: var(--clr-primary-5);
+}
+.random-btn {
+  margin-top: 0.5rem;
+  background: var(--clr-primary-10);
+  color: var(--clr-primary-5);
+  padding: 0.25rem 0.5rem;
+  text-transform: capitalize;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  border-color: var(--clr-primary-5);
+  cursor: pointer;
+}
+.random-btn:hover {
+  background: var(--clr-primary-5);
+  color: var(--clr-primary-1);
+}

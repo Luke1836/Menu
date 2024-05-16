@@ -93,7 +93,10 @@ main {
 /* END OF UTILITY CLASSES */
 
 .container {
-    width: clamp(350px, 40vw, 730px);
+    width: 50vw;
+    height: 60vh;
+    display: grid;
+    place-content: center;
     background-color: var(--body-color);
     margin: var(--margin);
     padding: var(--padding);
@@ -191,4 +194,54 @@ figure .quotes {
 .random-btn:hover {
   background: var(--clr-primary-5);
   color: var(--clr-primary-1);
+}
+
+@media screen and (min-width:1400px) {
+    .title h2 {
+        font-size: 5.5rem;
+    }
+
+    .underline {
+        height: 1rem;
+        width: 12rem;
+    }
+
+    #img-person {
+        height: 450px;
+        width: 450px;
+        border-top: 26px solid rgb(41, 170, 187);
+        border-right: 26px solid rgb(41, 170, 187);
+    }
+
+    figure .quotes {
+        top: 14%;
+        left: 2%;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    #job {
+        font-size: 2.75rem;
+    }
+
+    #author {
+        font-size: 4rem;
+    }
+
+    #content {
+        font-size: 2.25rem;
+        width: 60%;
+    }
+
+    .previous-btn,
+    .next-btn {
+        font-size: 3.25rem;
+    }
+
+    .random-btn {
+        width: 20rem;
+        height: 5rem;
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
 }

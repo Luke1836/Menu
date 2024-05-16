@@ -31,7 +31,7 @@ const reviews = [
 
   // Elements
   const img = document.getElementById("img-person");
-  const name = document.getElementById("author");
+  const name1 = document.getElementById("author");
   const info = document.getElementById("content");
   const job = document.getElementById("job");
 
@@ -51,7 +51,7 @@ const reviews = [
   {
     const item = reviews[person];
     img.src = item.img;
-    name.textContent = item.name;
+    name1.textContent = item.name;
     job.textContent = item.job;
     info.textContent = item.text;
 

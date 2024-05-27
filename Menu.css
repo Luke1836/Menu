@@ -81,7 +81,7 @@ main {
     margin-left: auto;
     background: var(--underline);
     margin-top: var(--margin-sm);
-    margin-bottom: var(--margin);
+    /* margin-bottom: var(--margin); */
 }
 
 .offscreen {
@@ -94,7 +94,7 @@ main {
 
 .container {
     width: 50vw;
-    height: 60vh;
+    height: 75vh;
     display: grid;
     place-content: center;
     background-color: var(--body-color);
@@ -113,17 +113,16 @@ main {
     align-items: center;
     text-align: center;
     margin: var(--margin);
-    line-height: 2;
+    line-height: 1.6;
 }
-
 
 figure{
     position: relative;
 }
 
 #img-person {
-    height: 150px;
-    width: 150px;
+    height: 140px;
+    width: 140px;
     object-fit: cover;
     border-radius: 50%;
     border-top: var(--img-border);
@@ -142,9 +141,12 @@ figure{
 }
 
 #content {
+    margin-top: 0.5rem;
+    width: 90%;
     text-align: center;
     line-height: 1.1;
     letter-spacing: normal;
+    font-size: 0.75rem;
 }
 
 figure .quotes {
@@ -168,7 +170,7 @@ figure .quotes {
 .previous-btn,
 .next-btn {
   color: var(--clr-primary-7);
-  font-size: 1.25rem;
+  font-size: 1rem;
   background: transparent;
   border-color: transparent;
   margin: 0 0.5rem;
@@ -194,54 +196,4 @@ figure .quotes {
 .random-btn:hover {
   background: var(--clr-primary-5);
   color: var(--clr-primary-1);
-}
-
-@media screen and (min-width:1400px) {
-    .title h2 {
-        font-size: 5.5rem;
-    }
-
-    .underline {
-        height: 1rem;
-        width: 12rem;
-    }
-
-    #img-person {
-        height: 450px;
-        width: 450px;
-        border-top: 26px solid rgb(41, 170, 187);
-        border-right: 26px solid rgb(41, 170, 187);
-    }
-
-    figure .quotes {
-        top: 14%;
-        left: 2%;
-        height: 5rem;
-        width: 5rem;
-    }
-
-    #job {
-        font-size: 2.75rem;
-    }
-
-    #author {
-        font-size: 4rem;
-    }
-
-    #content {
-        font-size: 2.25rem;
-        width: 60%;
-    }
-
-    .previous-btn,
-    .next-btn {
-        font-size: 3.25rem;
-    }
-
-    .random-btn {
-        width: 20rem;
-        height: 5rem;
-        font-size: 2.5rem;
-        font-weight: 500;
-    }
 }
